@@ -72,8 +72,8 @@
                 <a class="text-upgrade" href="#">effettua l'upgrade</a>
             </header>
             <article class="recipe-content">
-                <nav class="recipe-navbar">
-                    <ul>
+                <nav class="recipe-navbar flex">
+                    <ul class="text-navbar flex">
                         <li><a href="#">in evidenza</a></li>
                         <li><a href="#">podcast</a></li>
                         <li><a href="#">classifiche</a></li>
@@ -82,7 +82,7 @@
                         <li><a href="#">scopri</a></li>
                     </ul>
                 </nav>
-                <div>
+                <div class="recipe-tracks">
                     <h1 class="title-played">Recently played</h1>
                     <div class="recipe-row">
                         <div class="col">
@@ -142,33 +142,41 @@
                     </div>
                     <div class="recipe-johnDoe">
                         <h1 class="title-john">Creato per John Doe</h1>
-                        <span class="more-listened">Più ascoltati, più accurati saranno i suggerimenti.</span>
-                        <div class="flex recipe-imageJohn">
-                            <figure class="recipe-image">
-                                <img src="spotify/img/radar.jpeg" alt="Release Radar">
-                                <h3 class="text-song">Release Radar</h3>
-                            </figure>
-                            <figure class="recipe-image">
-                                <img src="spotify/img/mixdaily.jpeg" alt="Dally Mix 1">
-                                <h3 class="text-song">Dally Mix 1</h3>
-                            </figure>
+                        <span class="text-more">Più ascoltati, più accurati saranno i suggerimenti.</span>
+                        <div class="flex recipe-row">
+                            <div class="col">
+                                <figure class="recipe-image">
+                                    <img src="spotify/img/radar.jpeg" alt="Release Radar">
+                                    <h3 class="text-song">Release Radar</h3>
+                                </figure>
+                            </div>
+                            <div class="col">
+                                <figure class="recipe-image">
+                                    <img src="spotify/img/mixdaily.jpeg" alt="Dally Mix 1">
+                                    <h3 class="text-song">Dally Mix 1</h3>
+                                </figure>
+                            </div>
                         </div>
                     </div>
                     <div class="recipe-popular">
                         <h1 class="title-popular">Creato per John Doe</h1>
-                        <span class="more-popular">Più ascoltati, più accurati saranno i suggerimenti.</span>
-                        <div class="flex recipe-imagePopular">
-                            <figure class="recipe-image">
-                                <img src="spotify/img/youg.jpeg" alt="Young Beautiful">
-                                <h3 class="text-song">Lana del Rey</h3>
-                            </figure>
-                            <figure class="recipe-image">
-                                <img src="spotify/img/einaudi.jpeg" alt="Ludovico Einaudi">
-                                <h3 class="text-song">Ludovico Einaudi</h3>
-                            </figure>
+                        <span class="text-more">Più ascoltati, più accurati saranno i suggerimenti.</span>
+                        <div class="flex recipe-row">
+                            <div class="col">
+                                <figure class="recipe-image">
+                                    <img src="spotify/img/youg.jpeg" alt="Young Beautiful">
+                                    <h3 class="text-song">Lana del Rey</h3>
+                                </figure>
+                            </div>
+                            <div class="col">
+                                <figure class="recipe-image">
+                                    <img src="spotify/img/einaudi.jpeg" alt="Ludovico Einaudi">
+                                    <h3 class="text-song">Ludovico Einaudi</h3>
+                                </figure>
+                            </div>
                         </div>
                     </div>
-                <div>
+                </div>
             </article>
         </section>
     </main>
@@ -176,7 +184,7 @@
         <nav class="flex">
             <div class="recipe-music">
                 <figure class="chosen-song">
-                    <img src="" alt="Sinister">
+                    <img src="#" alt="Sinister">
                 </figure>
                 <span class="title-music">Sinister</span>
                 <span class="title-song">Brano</span>

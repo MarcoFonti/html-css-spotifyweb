@@ -35,10 +35,31 @@ img {
     display: block;
 }
 
+/* Titoli H1 */
+h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+/* Titoli canzoni H3 */
+h3 {
+    margin: 10px 0px;
+}
+
+/* Testo brani più ascoltati */
+.text-more {
+    margin-bottom: 10px;
+}
+
 /* Link senza Linea */
 a {
     text-decoration: none;
     display: inline-block;
+}
+
+/* Span */
+span {
+    display: block;
 }
 
 /* Liste senza Puntino */
@@ -86,6 +107,12 @@ li {
     height: calc(100vh - 70px);
 }
 
+
+/* Grandezza Recipiente Play List */
+.recipe-play-list {
+    width: 90%;
+}
+
 /* Immagini dentro */
 .recipe-aside img {
     width: 25px;
@@ -93,9 +120,16 @@ li {
 
 /* Recipiente Login */
 .recipe-login {
-    display: flex;
     align-items: center;
     margin-bottom: 10px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Recipiente Aside */
+.recipe-aside {
+    flex-direction: column;
+    gap: 10px;
 }
 
 /* Immagine Download */
@@ -130,83 +164,76 @@ li {
     font-weight: 600;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Grandezza Recipiente Play List */
-.recipe-play-list {
-    width: 90%;
+/* Recipiente Contenuto */
+.recipe-content {
+    padding: 10px;
 }
 
+/* Recipiente NavBar */
+.recipe-navbar {
+    justify-content: center;
+    align-items: center;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.recipe-imageJohn,
-.recipe-imagePopular {
+/* Lista Navbar */
+.text-navbar {
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    row-gap: 10px;
+    padding: 5px;
 }
 
-.recipe-aside, 
-.recipe-login {
-    flex-direction: column;
-    gap: 10px;
+/* Elementi dentro la lista Navbar */
+.text-navbar li {
+    flex-basis: calc(100% / 4);
+    text-align: center;
 }
 
+/* Link dentro la Navbar */
+.text-navbar a {
+    color: #7C7F83;
+    text-transform: uppercase;
+    font-size: 14px;
+}
 
+/* Testi */
+.text-song , 
+.text-artists {
+    text-align: center;
+}
 
+/* Testo artisti */
+.text-artists {
+    color: #63656B;
+}
 
+/* Recipiente Brani */
+.recipe-tracks {
+    margin-top: 2rem;
+}
 
-
-
-
-
+/* Recipiente di tutte le col */
 .recipe-row {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	row-gap: 2rem;
+    margin: 0 -0.5rem;
 }
 
+/* Grandezza Col */
 .col {
 	flex-basis: 100%;
-	border: 2px dashed;
+    padding: 0 0.5rem;
 }
 
-.recipe-row {
-	margin: 0 -1rem;
-}
-.col {
-	padding: 0 1rem;
-}
+
+
+
+
+
+
 
 
 
