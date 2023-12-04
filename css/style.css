@@ -7,4 +7,211 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+}
+
+/* ? Utility */
+
+/* Colori Sfondo */
+.aside-navbar {
+    background-color: #000000;
+}
+
+.recipe-upgrade {
+    background-color: #080B12;
+}
+
+.recipe-content {
+    background-color: #141922;
+}
+
+.recipe-navfooter {
+    background-color: #282828;
+}
+
+/* Immagini */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Link senza Linea */
+a {
+    text-decoration: none;
+}
+
+/* Liste senza Puntino */
+li {
+    list-style: none;
+}
+
+/* Flex */
+.flex {
+    display: flex;
+}
+
+/* Elementi a Schermo grande */
+.large-display {
+    display: none;
+}
+
+/* Todo: INIZIO */
+
+/* Altezze Recipienti Upgrade e Navfooter*/
+.recipe-upgrade,
+.recipe-navfooter {
+    height: 70px;
+}
+
+/* Recipiente Navfooter Fisso */
+.recipe-navfooter {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Recipiente Contenuto */
+.recipe-content {
+    height: calc(100vh - 140px);
+    overflow: auto;
+}
+
+/* Grandezza Aside */
+.aside-navbar {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 10%;
+    height: calc(100vh - 70px);
+}
+
+/* Immagini dentro */
+.recipe-aside img {
+    width: 25px;
+}
+
+/* Recipiente Login */
+.recipe-login {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Immagine Download */
+.image-download {
+    width: 20px;
+}
+
+/* Immagine Login */
+.image-login {
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    width: 30px;
+    background-color: #828282;
+    padding: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Grandezza Recipiente Play List */
+.recipe-play-list {
+    width: 90%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.recipe-imageJohn,
+.recipe-imagePopular {
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.recipe-aside, 
+.recipe-login {
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+.recipe-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	row-gap: 2rem;
+}
+
+.col {
+	flex-basis: 100%;
+	border: 2px dashed;
+}
+
+.recipe-row {
+	margin: 0 -1rem;
+}
+.col {
+	padding: 0 1rem;
+}
+
+
+
+
+@media screen and (min-width: 576px) {
+	.col {
+		flex-basis: 50%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.col {
+		flex-basis: calc(100% / 3);
+	}
+}
+@media screen and (min-width: 992px) {
+	.col {
+		flex-basis: 25%;
+	}
+}
+
+@media screen and (min-width: 1180px) {
+	.col {
+		flex-basis: calc(100% / 6);
+	}
 }
