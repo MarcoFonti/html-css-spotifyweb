@@ -21,7 +21,7 @@ body {
     background-color: #080B12;
 }
 
-.recipe-content {
+.recipe-song {
     background-color: #141922;
 }
 
@@ -35,20 +35,21 @@ img {
     display: block;
 }
 
-/* Titoli H1 */
-h1 {
+/* Titolo Played */
+.title-played {
     font-size: 30px;
-    margin-bottom: 15px;
+    margin: 0rem 1rem;
 }
 
-/* Titoli canzoni H3 */
-h3 {
+/* Titoli canzoni */
+.text-song {
     margin: 10px 0px;
 }
 
 /* Testo brani più ascoltati */
-.text-more {
+.mg-popular {
     margin-bottom: 10px;
+    margin: 0rem 1rem;
 }
 
 /* Link senza Linea */
@@ -72,58 +73,32 @@ li {
     display: flex;
 }
 
-/* Elementi a Schermo grande */
+/* Testo della NavBar alliniato */
+.text-aligned {
+    align-items: center;
+}
+
+/* Elementi solo a Schermo grande */
 .large-display {
     display: none;
 }
 
+
 /* Todo: INIZIO */
 
-/* Altezze Recipienti Upgrade e Navfooter*/
-.recipe-upgrade,
-.recipe-navfooter {
-    height: 70px;
-}
-
-/* Recipiente Navfooter Fisso */
-.recipe-navfooter {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Recipiente Contenuto */
+/* Recipiente Contenuti */
 .recipe-content {
-    height: calc(100vh - 140px);
-    overflow: auto;
+    height: calc(100vh - 90px);
 }
 
-/* Grandezza Aside */
+/* Aside */
 .aside-navbar {
+    flex-basis: 50px;
+    flex-shrink: 0;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    width: 10%;
-    height: calc(100vh - 70px);
-}
-
-
-/* Grandezza Recipiente Play List */
-.recipe-play-list {
-    width: 90%;
-}
-
-/* Immagini dentro */
-.recipe-aside img {
-    width: 25px;
-}
-
-/* Recipiente Login */
-.recipe-login {
-    align-items: center;
-    margin-bottom: 10px;
-    flex-direction: column;
-    gap: 10px;
+    padding: 10px;
 }
 
 /* Recipiente Aside */
@@ -132,10 +107,77 @@ li {
     gap: 10px;
 }
 
+/* Immagini dentro */
+.recipe-aside img {
+    width: 25px;
+}
+
+/* Recipiente logo large */
+.recipe-logo {
+    justify-content: flex-start;
+}
+
+/* Immagine logo Display Large */
+.recipe-logo img {
+    width: 160px;
+}
+
+/* Recipiente Crazione della Playlist */
+.recipe-create-playlists {
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+/* Titolo Playlist */
+.title-playList {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+/* Recipiente Aggiungi canzone */
+.recipe-add-song {
+    align-items: center;
+    gap: 5px;
+}
+
+/* Immagine dentro */
+.recipe-add-song img {
+    width: 50px;
+} 
+
+/* Testo dentro */
+.text-playList a {
+    color: #ffffff;
+    margin: 10px 0px;
+}
+
+
+
+/* ! logo gardne e testo / recipe-create-playlists */
+
+
+/* Recipiente Login */
+.recipe-login {
+    margin-bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
 /* Immagine Download */
 .image-download {
     width: 20px;
 }
+
+.recipe-install,
+.recipe-username {
+    gap: 5px;
+}
+
+
+/* ! scritta istalla */
 
 /* Immagine Login */
 .image-login {
@@ -146,8 +188,22 @@ li {
     padding: 4px;
 }
 
+/* ! nome usernem */
+
+
+/* Recipiente Brani */
+.recipe-song {
+    flex-grow: 1;
+    overflow: auto;
+}
+
 /* Recipiente Upgrade */
 .recipe-upgrade {
+    height: 80px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
     justify-content: end;
     align-items: center;
 }
@@ -164,15 +220,16 @@ li {
     font-weight: 600;
 }
 
-/* Recipiente Contenuto */
-.recipe-content {
-    padding: 10px;
+/* Recipiente Brani */
+.recipe-tracks {
+    margin: 20px 0px;
 }
 
 /* Recipiente NavBar */
 .recipe-navbar {
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 /* Lista Navbar */
@@ -195,6 +252,22 @@ li {
     color: #7C7F83;
     text-transform: uppercase;
     font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Recipiente di tutte le col */
+.recipe-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	row-gap: 2rem;
+    margin: 2rem 0.5rem;
+}
+
+/* Grandezza Col */
+.col {
+	flex-basis: 100%;
+    padding: 0 0.5rem;
 }
 
 /* Testi */
@@ -208,54 +281,171 @@ li {
     color: #63656B;
 }
 
-/* Recipiente Brani */
-.recipe-tracks {
-    margin-top: 2rem;
+/* Immagini Arrotondate */
+.image-radius {
+    border-radius: 50%;
 }
 
-/* Recipiente di tutte le col */
-.recipe-row {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	row-gap: 2rem;
-    margin: 0 -0.5rem;
+/* Recipiente Footer */
+.recipe-navfooter {
+    height: 90px;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Grandezza Col */
-.col {
-	flex-basis: 100%;
-    padding: 0 0.5rem;
+/* Contenitore NavFooter */
+.container-navfooter {
+    align-items: center;
+    justify-content: center;
+    flex-basis: 100%;
+    padding: 10px;
+}
+
+/* Dimensione del Contenitore dei Contenuti */
+.h-33 {
+    width: calc(100% / 3);
+    text-align: center;
+}
+
+/* Recipiente Musica */
+.recipe-music {
+    align-items: center;
+}
+
+/* Brano Scelto */
+.chosen-song {
+    margin-right: 10px;
+    width: 40px;
+}
+
+/* Testo del Brano scelto */
+.text-chones-song {
+    text-align: start;
+}
+
+/* Titolo Brano */
+.title-music {
+    font-weight: 900;
+}
+
+/* Brano e Nome */
+.title-song,
+.title-name {
+    font-size: 12px;
+}
+
+/* Contenitore dei Mi Piace */
+.like-it {
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 30px;
+}
+
+/* Recipiente Play */
+.recipe-play {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  
+}
+
+/* Recipiente delle impostazione di Play */
+.recipe-inPlay {
+    gap: 15px;
+    align-items: center;
+    font-size: 20px;
+    justify-content: center;  
+}
+
+/* Cechio del Play */
+.text-border {
+
+}
+
+/* Recipiente Durata del brano */
+.recipe-duration {
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+/* Durata */
+.duration {
+
+}
+
+/* Riga Volume e Durata Brano */
+.dash {
+    width: 100px;
+    background-color: aqua;
+    height: 2px;
+}
+
+/* Volume */
+.volume {
+
+}
+
+/* Recipiente del volume */
+.recipe-volume {
+    gap: 5px;
+    align-items: center;
+    margin-left: 5px;
+    justify-content: flex-end;
 }
 
 
-
-
-
-
-
-
-
-
+/* TODO: Media Query */
 
 @media screen and (min-width: 576px) {
+    /* 2 Brani */
 	.col {
 		flex-basis: 50%;
 	}
 }
 
 @media screen and (min-width: 768px) {
+    /* 3 Brani */
 	.col {
 		flex-basis: calc(100% / 3);
 	}
+
+    .recipe-logo-small {
+        display: none;
+    }
+
+    .aside-navbar {
+        flex-basis: 200px;
+        align-items: flex-start;
+    }
+
+    .recipe-login {
+        align-items: flex-start;
+    }
+
+    .recipe-logo {
+        margin-bottom: 20px;
+    }
+
+    .large-display {
+        display: flex;
+    }
 }
 @media screen and (min-width: 992px) {
+    /* 4 barni */
 	.col {
 		flex-basis: 25%;
 	}
 }
 
 @media screen and (min-width: 1180px) {
+    /* 6 Brani */
 	.col {
 		flex-basis: calc(100% / 6);
 	}

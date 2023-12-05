@@ -18,34 +18,36 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <main class="flex">
+    <!-- Recipiente Contenuti -->
+    <div class="recipe-content flex">
+        <!-- Aside Barra-Laterale -->
         <aside class="aside-navbar flex">
             <div class="recipe-aside flex">
-                <figure class="recipe-logo">
+                <figure class="recipe-logo flex">
                     <img class="large-display" src="spotify/img/logo.svg" alt="Logo Spotify">
                 </figure>
                 <figure class="recipe-logo-small">
                     <img src="spotify/img/logo-small.svg" alt="Logo Spotify">
                 </figure>
-                <figure class="recipe-home">
+                <figure class="recipe-home flex text-aligned ">
                     <img src="spotify/img/home.svg" alt="Home">
                     <span class="large-display">Home</span>
                 </figure>
-                <figure class="recipe-near">
+                <figure class="recipe-near flex text-aligned ">
                     <img src="spotify/img/search.svg" alt="Cerca">
                     <span class="large-display">Cerca</span>
                 </figure>
-                <figure class="recipe-bookshelf">
+                <figure class="recipe-bookshelf flex text-aligned ">
                     <img src="spotify/img/libreria.svg" alt="Libreria">
                     <span class="large-display">La tua libreria</span>
                 </figure>
                 <div class="recipe-create-playlists large-display">
-                    <h2>playlist</h2>
-                    <figure class="recipe-add-song">
+                    <h2 class="title-playList">playlist</h2>
+                    <figure class="recipe-add-song flex">
                         <img src="spotify/img/player_left.jpg" alt="Aggiungi Brano">
                         <span>Crea Playlist</span>
                     </figure>
-                    <ul>
+                    <ul class="text-playList">
                         <li><a href="#">Nome Playlist</a></li>
                         <li><a href="#">Nome Playlist</a></li>
                         <li><a href="#">Nome Playlist</a></li>
@@ -57,21 +59,24 @@
                 </div>
             </div>
             <div class="recipe-login flex">
-                <figure class="recipe-install">
+                <figure class="recipe-install flex">
                     <img class="image-download" src="spotify/img/download.svg" alt="Installa app">
                     <span class="large-display">Installa app</span>
                 </figure>
-                <figure class="recipe-username">
+                <figure class="recipe-username flex">
                     <img class="image-login" src="spotify/img/profile.svg" alt="Login">
                     <h1 class="username large-display">John Doe</h1>
                 </figure>
             </div>
         </aside>
-        <section class="recipe-play-list">
+        <!-- Recipiente Brani -->
+        <main class="recipe-song">
+            <!-- Header Upgrade -->
             <header class="recipe-upgrade flex">
                 <a class="text-upgrade" href="#">effettua l'upgrade</a>
             </header>
-            <article class="recipe-content">
+            <!-- Recipiente Brani -->
+            <div class="recipe-tracks">
                 <nav class="recipe-navbar flex">
                     <ul class="text-navbar flex">
                         <li><a href="#">in evidenza</a></li>
@@ -82,135 +87,144 @@
                         <li><a href="#">scopri</a></li>
                     </ul>
                 </nav>
-                <div class="recipe-tracks">
-                    <h1 class="title-played">Recently played</h1>
-                    <div class="recipe-row">
-                        <div class="col">
-                            <div class="card">
-                                <figure class="recipe-image">
-                                    <img src="spotify/img/metal_lifting.jpg" alt="Heavy Metal">
-                                    <h3 class="text-song">Heavy Metal</h3>
-                                    <span class="text-artists">Subtitle</span>
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <figure class="recipe-image">
-                                    <img src="spotify/img/stranger.jpeg" alt="Stenger Things">
-                                    <h3 class="text-song">Strenger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
-                                    <span class="text-artists">Kyle Dixon & Michael Stein</span>
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <figure class="recipe-image">
-                                    <img src="spotify/img/aquietplace.jpeg" alt="A quiet place">
-                                    <h3 class="text-song">A quiet place</h3>
-                                    <span class="text-artists">Subtitle</span>
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <figure class="recipe-image">
-                                    <img src="spotify/img/split.jpeg" alt="Split">
-                                    <h3 class="text-song">Split</h3>
-                                    <span class="text-artists">Subtitle</span>
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <figure class="recipe-image">
-                                    <img src="spotify/img/cure.jpeg" alt="A cure for wellness">
-                                    <h3 class="text-song">A cure for wellness</h3>
-                                    <span class="text-artists">Subtitle</span>
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <figure class="recipe-image">
-                                    <img src="spotify/img/sinister.jpeg" alt="Sinister">
-                                    <h3 class="text-song">Sinister</h3>
-                                    <span class="text-artists">Subtitle</span>
-                                </figure>
-                            </div>
+                <h1 class="title-played">Recently played</h1>
+                <!-- Sezione dei Brani -->
+                <section class="recipe-row">
+                    <div class="col">
+                        <div class="card">
+                            <figure class="recipe-image">
+                                <img src="spotify/img/metal_lifting.jpg" alt="Heavy Metal">
+                                <h3 class="text-song">Heavy Metal</h3>
+                                <span class="text-artists">Subtitle</span>
+                            </figure>
                         </div>
                     </div>
-                    <div class="recipe-johnDoe">
+                    <div class="col">
+                        <div class="card">
+                            <figure class="recipe-image">
+                                <img src="spotify/img/stranger.jpeg" alt="Stenger Things">
+                                <h3 class="text-song">Strenger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
+                                <span class="text-artists">Kyle Dixon & Michael Stein</span>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <figure class="recipe-image">
+                                <img src="spotify/img/aquietplace.jpeg" alt="A quiet place">
+                                <h3 class="text-song">A quiet place</h3>
+                                <span class="text-artists">Subtitle</span>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <figure class="recipe-image">
+                                <img src="spotify/img/split.jpeg" alt="Split">
+                                <h3 class="text-song">Split</h3>
+                                <span class="text-artists">Subtitle</span>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <figure class="recipe-image">
+                                <img src="spotify/img/cure.jpeg" alt="A cure for wellness">
+                                <h3 class="text-song">A cure for wellness</h3>
+                                <span class="text-artists">Subtitle</span>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <figure class="recipe-image">
+                                <img src="spotify/img/sinister.jpeg" alt="Sinister">
+                                <h3 class="text-song">Sinister</h3>
+                                <span class="text-artists">Subtitle</span>
+                            </figure>
+                        </div>
+                    </div>
+                </section>
+                <!-- Sezione Canzoni John Doe -->
+                <section class="recipe-johnDoe">
+                    <div class="mg-popular">
                         <h1 class="title-john">Creato per John Doe</h1>
                         <span class="text-more">Più ascoltati, più accurati saranno i suggerimenti.</span>
-                        <div class="flex recipe-row">
-                            <div class="col">
-                                <figure class="recipe-image">
-                                    <img src="spotify/img/radar.jpeg" alt="Release Radar">
-                                    <h3 class="text-song">Release Radar</h3>
-                                </figure>
-                            </div>
-                            <div class="col">
-                                <figure class="recipe-image">
-                                    <img src="spotify/img/mixdaily.jpeg" alt="Dally Mix 1">
-                                    <h3 class="text-song">Dally Mix 1</h3>
-                                </figure>
-                            </div>
+                    </div>
+                    <div class="flex recipe-row">
+                        <div class="col">
+                            <figure class="recipe-image">
+                                <img src="spotify/img/radar.jpeg" alt="Release Radar">
+                                <h3 class="text-song">Release Radar</h3>
+                            </figure>
+                        </div>
+                        <div class="col">
+                            <figure class="recipe-image">
+                                <img src="spotify/img/mixdaily.jpeg" alt="Dally Mix 1">
+                                <h3 class="text-song">Dally Mix 1</h3>
+                            </figure>
                         </div>
                     </div>
-                    <div class="recipe-popular">
+                </section>
+                <div class="recipe-popular">
+                    <div class="mg-popular">
                         <h1 class="title-popular">Creato per John Doe</h1>
-                        <span class="text-more">Più ascoltati, più accurati saranno i suggerimenti.</span>
-                        <div class="flex recipe-row">
-                            <div class="col">
-                                <figure class="recipe-image">
-                                    <img src="spotify/img/youg.jpeg" alt="Young Beautiful">
-                                    <h3 class="text-song">Lana del Rey</h3>
-                                </figure>
-                            </div>
-                            <div class="col">
-                                <figure class="recipe-image">
-                                    <img src="spotify/img/einaudi.jpeg" alt="Ludovico Einaudi">
-                                    <h3 class="text-song">Ludovico Einaudi</h3>
-                                </figure>
-                            </div>
+                        <span class="text-more">Più ascoltati, più accurati saranno i suggerimenti.</span> 
+                    </div>
+                    <div class="flex recipe-row">
+                        <div class="col">
+                            <figure class="recipe-image radius-image">
+                                <img class="image-radius" src="spotify/img/youg.jpeg" alt="Young Beautiful">
+                                <h3 class="text-song">Lana del Rey</h3>
+                            </figure>
+                        </div>
+                        <div class="col">
+                            <figure class="recipe-image">
+                                <img class="image-radius" src="spotify/img/einaudi.jpeg" alt="Ludovico Einaudi">
+                                <h3 class="text-song">Ludovico Einaudi</h3>
+                            </figure>
                         </div>
                     </div>
                 </div>
-            </article>
-        </section>
-    </main>
-    <footer class="recipe-navfooter">
-        <nav class="flex">
-            <div class="recipe-music">
-                <figure class="chosen-song">
-                    <img src="#" alt="Sinister">
-                </figure>
-                <span class="title-music">Sinister</span>
-                <span class="title-song">Brano</span>
-                <span class="title-name">Nome</span>
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-regular fa-folder"></i>
             </div>
-            <div class="recipe-play">
-                <div class="recipe-inPlay">
+        </main>
+    </div>
+    <!-- Footer -->
+    <footer class="recipe-navfooter flex">
+        <nav class="container-navfooter flex">
+            <div class="recipe-music flex h-33">
+                <figure class="chosen-song">
+                    <img src="spotify/img/sinister.jpeg" alt="Sinister">
+                </figure>
+                <div class="text-chones-song">
+                    <span class="title-music">Sinister</span>
+                    <span class="title-song">Brano</span>
+                    <span class="title-name">Nome</span>
+                </div>
+                <div class="like-it flex">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-folder"></i>
+                </div>
+            </div>
+            <div class="recipe-play h-33">
+                <div class="recipe-inPlay flex">
                     <i class="fa-solid fa-shuffle"></i>
                     <i class="fa-solid fa-backward-fast"></i>
-                    <i class="fa-solid fa-play"></i>
+                    <i class="fa-solid fa-play text-border"></i>
                     <i class="fa-solid fa-forward-fast"></i>
                     <i class="fa-solid fa-rotate-right"></i>
                 </div>
-                <div class="recipe-duration">
+                <div class="recipe-duration flex">
                     <span class="text-start">0.25</span>
-                    <span class="dash-duration"></span>
+                    <span class="dash"></span>
                     <span class="text-end">4.35</span>
                 </div>
             </div>
-            <div class="recipe-volume">
+            <div class="recipe-volume flex h-33">
                 <i class="fa-solid fa-list"></i>
                 <i class="fa-solid fa-tv"></i>
                 <i class="fa-solid fa-volume-high"></i>
-                <span class="dash-volume"></span>
+                <span class="dash volume"></span>
             </div>
         </nav>
     </footer>
