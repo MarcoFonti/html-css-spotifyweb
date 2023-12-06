@@ -76,6 +76,7 @@ li {
 /* Testo della NavBar alliniato */
 .text-aligned {
     align-items: center;
+    gap: 5px;
 }
 
 /* Elementi solo a Schermo grande */
@@ -83,6 +84,20 @@ li {
     display: none;
 }
 
+/* Colore Testi */
+.color-6D6D6D {
+    color: #6D6D6D;
+}
+
+/* Barra active */
+.active::after {
+    content: '';
+    display: block;
+    width: 20%;
+    height: 2px;
+    background-color: #adff2f;
+    margin: 2px auto;
+}
 
 /* Todo: INIZIO */
 
@@ -139,41 +154,37 @@ li {
 /* Recipiente Aggiungi canzone */
 .recipe-add-song {
     align-items: center;
-    gap: 5px;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
-/* Immagine dentro */
-.recipe-add-song img {
-    width: 50px;
-} 
+/* Icona dentro */
+.recipe-add-song i {
+    color: #7C7F83;
+}
 
 /* Testo dentro */
 .text-playList a {
-    color: #ffffff;
-    margin: 10px 0px;
+    color: #6D6D6D;
+    margin: 5px 0px;
+    font-size: 14px;
 }
-
-
-
-/* ! logo gardne e testo / recipe-create-playlists */
-
 
 /* Recipiente Login */
 .recipe-login {
-    margin-bottom: 10px;
     flex-direction: column;
-    align-items: center;
     gap: 10px;
 }
 
 /* Immagine Download */
 .image-download {
-    width: 20px;
+    width: 25px;
 }
 
 .recipe-install,
 .recipe-username {
-    gap: 5px;
+    gap: 10px;
+    align-items: center;
 }
 
 
@@ -183,7 +194,7 @@ li {
 .image-login {
     border-radius: 50%;
     border: 1px solid #ffffff;
-    width: 30px;
+    width: 35px;
     background-color: #828282;
     padding: 4px;
 }
@@ -218,6 +229,7 @@ li {
     margin-right: 15px;
     font-size: 14px;
     font-weight: 600;
+    transition: font-size 0.3s ease;
 }
 
 /* Recipiente Brani */
@@ -238,7 +250,7 @@ li {
     align-items: center;
     flex-wrap: wrap;
     row-gap: 10px;
-    padding: 5px;
+    width: 100%;
 }
 
 /* Elementi dentro la lista Navbar */
@@ -252,7 +264,6 @@ li {
     color: #7C7F83;
     text-transform: uppercase;
     font-size: 14px;
-    margin-bottom: 20px;
 }
 
 /* Recipiente di tutte le col */
@@ -289,10 +300,6 @@ li {
 /* Recipiente Footer */
 .recipe-navfooter {
     height: 90px;
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    right: 0;
     justify-content: center;
     align-items: center;
 }
@@ -400,6 +407,19 @@ li {
     justify-content: flex-end;
 }
 
+/* TODO: Hover */
+
+/* Testo Upgrade in Hover */
+.text-upgrade:hover {
+    font-size: 16px;
+    opacity: 0.6;
+}
+
+.text-navbar a:hover{
+    font-size: 16px;
+}
+
+
 
 /* TODO: Media Query */
 
@@ -408,6 +428,7 @@ li {
 	.col {
 		flex-basis: 50%;
 	}
+    
 }
 
 @media screen and (min-width: 768px) {
@@ -422,12 +443,9 @@ li {
 
     .aside-navbar {
         flex-basis: 200px;
-        align-items: flex-start;
+        align-items: normal;
     }
 
-    .recipe-login {
-        align-items: flex-start;
-    }
 
     .recipe-logo {
         margin-bottom: 20px;
@@ -436,12 +454,27 @@ li {
     .large-display {
         display: flex;
     }
+
+    /* Elementi dentro la lista Navbar */
+    .text-navbar li {
+    flex-basis: calc(100% / 3);
+    }
 }
 @media screen and (min-width: 992px) {
     /* 4 barni */
 	.col {
 		flex-basis: 25%;
 	}
+
+    /* Elementi dentro la lista Navbar */
+    .text-navbar li {
+        flex-basis: calc(100% / 5);
+    }
+
+   
+
+
+
 }
 
 @media screen and (min-width: 1180px) {
@@ -449,4 +482,9 @@ li {
 	.col {
 		flex-basis: calc(100% / 6);
 	}
+
+    /* Elementi dentro la lista Navbar */
+    .text-navbar li {
+        flex-basis: calc(100% / 6);
+    }
 }
