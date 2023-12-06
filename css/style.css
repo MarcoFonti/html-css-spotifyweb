@@ -5,51 +5,23 @@
     box-sizing: border-box 
 }
 
+/* Carattere Testo */
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: '', sans-serif;
     color: #ffffff;
 }
 
 /* ? Utility */
 
-/* Colori Sfondo */
-.aside-navbar {
-    background-color: #000000;
-}
-
-.recipe-upgrade {
-    background-color: #080B12;
-}
-
-.recipe-song {
-    background-color: #141922;
-}
-
-.recipe-navfooter {
-    background-color: #282828;
+/* Flex */
+.flex {
+    display: flex;
 }
 
 /* Immagini */
 img {
     max-width: 100%;
     display: block;
-}
-
-/* Titolo Played */
-.title-played {
-    font-size: 30px;
-    margin: 0rem 1rem;
-}
-
-/* Titoli canzoni */
-.text-song {
-    margin: 10px 0px;
-}
-
-/* Testo brani più ascoltati */
-.mg-popular {
-    margin-bottom: 10px;
-    margin: 0rem 1rem;
 }
 
 /* Link senza Linea */
@@ -68,23 +40,35 @@ li {
     list-style: none;
 }
 
-/* Flex */
-.flex {
-    display: flex;
-}
-
-/* Testo della NavBar alliniato */
-.text-aligned {
-    align-items: center;
-    gap: 5px;
-}
-
 /* Elementi solo a Schermo grande */
 .large-display {
     display: none;
 }
 
-/* Colore Testi */
+/* Colori Sfondo */
+.aside-navbar {
+    background-color: #000000;
+}
+
+.recipe-upgrade {
+    background-color: #080B12;
+}
+
+.recipe-song {
+    background-color: #141922;
+}
+
+.recipe-navfooter {
+    background-color: #282828;
+}
+
+/* Testo della Aside alliniato */
+.text-aligned {
+    align-items: center;
+    gap: 5px;
+}
+
+/* Colore Testi Aside */
 .color-6D6D6D {
     color: #6D6D6D;
 }
@@ -96,8 +80,26 @@ li {
     width: 20%;
     height: 2px;
     background-color: #adff2f;
-    margin: 2px auto;
+    margin: 0 auto;
 }
+
+/* Titolo Played */
+.title-played {
+    font-size: 30px;
+    margin: 0rem 1rem;
+}
+
+/* Titoli canzoni */
+.text-song {
+    margin: 10px 0px;   
+}
+
+/* Testo brani più ascoltati */
+.mg-popular {
+    margin-bottom: 10px;
+    margin: 0rem 1rem;  
+}
+
 
 /* Todo: INIZIO */
 
@@ -162,6 +164,13 @@ li {
 /* Icona dentro */
 .recipe-add-song i {
     color: #7C7F83;
+    cursor: pointer;
+}
+
+/* Crea PlayList */
+.playlist {
+    color: #ffffff;
+    
 }
 
 /* Testo dentro */
@@ -188,9 +197,6 @@ li {
     align-items: center;
 }
 
-
-/* ! scritta istalla */
-
 /* Immagine Login */
 .image-login {
     border-radius: 50%;
@@ -198,10 +204,8 @@ li {
     width: 35px;
     background-color: #828282;
     padding: 4px;
+    cursor: pointer;
 }
-
-/* ! nome usernem */
-
 
 /* Recipiente Brani */
 .recipe-song {
@@ -282,18 +286,20 @@ li {
     padding: 0 0.5rem;
 }
 
+/* Contenitore Immagini dentro col */
 .image-container {
     position: relative;
+    cursor: pointer;
 }
 
+/* Icona Play */
 .player {
     position: absolute;
     top: 50%;
     left: 50%;
     translate: -50% -50%;
     font-size: 50px;
-    display: none;
-    
+    display: none;  
 }
 
 /* Testi */
@@ -373,7 +379,6 @@ li {
     flex-direction: column;
     align-items: center;
     gap: 5px;
-  
 }
 
 /* Recipiente delle impostazione di Play */
@@ -384,9 +389,15 @@ li {
     justify-content: center;  
 }
 
-/* Cechio del Play */
-.text-border {
+/* Manina agli elementi del inPlay */
+.recipe-inPlay i {
+    cursor: pointer;
+}
 
+
+/* Boottene Play */
+.bottom-play {
+    font-size: 35px;
 }
 
 /* Recipiente Durata del brano */
@@ -398,21 +409,27 @@ li {
     margin-top: 10px;
 }
 
-/* Durata */
-.duration {
-
+/* Contenitore della Durata */
+.line-duration {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+  
+/* Linea Grande */
+.line-large {
+    width: 100%; 
+    border: 1px solid #000000; 
 }
 
-/* Riga Volume e Durata Brano */
-.dash {
-    width: 100px;
-    background-color: aqua;
-    height: 2px;
-}
-
-/* Volume */
-.volume {
-
+/* Linea Piccola */
+.line-small {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 10%;
+    height: 1px; 
+    background-color: #ff0000; 
 }
 
 /* Recipiente del volume */
@@ -423,68 +440,119 @@ li {
     justify-content: flex-end;
 }
 
+/* Contenitore del Volume */
+.line-volume {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Linea Grande */
+.volume-large {
+    width: 100px; 
+    border: 1px solid #000000; 
+}
+
+/*Linea Piccola */
+  .volume-small {
+    position: absolute;
+    width: 80%;
+    top: 0;
+    left: 0; 
+    height: 1px; 
+    background-color: #ff0000; 
+}
+
+
 /* TODO: Hover */
 
-/* Testo Upgrade in Hover */
+/* Testo Upgrade */
 .text-upgrade:hover {
     font-size: 16px;
     opacity: 0.6;
 }
 
+/* I Link della Navbar */
 .text-navbar a:hover{
     font-size: 16px;
 }
 
+/* Play della Canzone */
 .image-container:hover .player {
     display: inline;
-
 }
 
+/* Opacità della figure */
 .recipe-image figure:hover {
     opacity: 0.6;
-    
 } 
+
+.active-heart:active {
+    color: #ff0000;
+}
 
 
 /* TODO: Media Query */
 
+/* MEDIA QUERY 576PX*/
 @media screen and (min-width: 576px) {
     /* 2 Brani */
 	.col {
 		flex-basis: 50%;
-	}
-    
+	} 
 }
 
+/* MEDIA QUERY 768PX*/
 @media screen and (min-width: 768px) {
     /* 3 Brani */
 	.col {
 		flex-basis: calc(100% / 3);
 	}
 
-    .recipe-logo-small {
-        display: none;
+    /* Elementi nel Dispaly Grande compaiono */
+    .large-display {
+        display: flex;
     }
 
+    /* Grandezza Aside */
     .aside-navbar {
         flex-basis: 250px;
         align-items: normal;
     }
 
-
-    .recipe-logo {
-        margin-bottom: 20px;
+    /* Logo Piccolo scompare */
+    .recipe-logo-small {
+        display: none;
     }
 
-    .large-display {
-        display: flex;
+    /* Logo Grande */
+    .recipe-logo {
+        margin-bottom: 20px;
     }
 
     /* Elementi dentro la lista Navbar */
     .text-navbar li {
     flex-basis: calc(100% / 3);
     }
+
+    /* Recipiente Info Canzone */
+    .recipe-info-son {
+        display: flex;
+        gap: 3px;
+    }
+
+    /* Mi piace */
+    .like-it {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    /* Recipiente Play della Canzone */
+    .recipe-inPlay {
+        gap: 20px;
+    }
 }
+
+/* MEDIA QUERY 992PX*/
 @media screen and (min-width: 992px) {
     /* 4 barni */
 	.col {
@@ -496,12 +564,18 @@ li {
         flex-basis: calc(100% / 5);
     }
 
-   
+    /* Immagine Brano Scelto */
+    .chosen-song {
+    width: 60px;
+    }
 
-
-
+    /* Recipiente vai al Play*/
+    .recipe-inPlay {
+    gap: 30px;
+    }
 }
 
+/* MEDIA QUERY 1180PX*/
 @media screen and (min-width: 1180px) {
     /* 6 Brani */
 	.col {

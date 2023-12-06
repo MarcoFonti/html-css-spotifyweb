@@ -22,6 +22,7 @@
     <div class="recipe-content flex">
         <!-- Aside Barra-Laterale -->
         <aside class="aside-navbar flex">
+            <!-- Recipiente Top -->
             <div class="recipe-aside flex">
                 <figure class="recipe-logo flex">
                     <img class="large-display" src="spotify/img/logo.svg" alt="Logo Spotify">
@@ -29,23 +30,23 @@
                 <figure class="recipe-logo-small">
                     <img src="spotify/img/logo-small.svg" alt="Logo Spotify">
                 </figure>
-                <figure class="recipe-home flex text-aligned ">
+                <figure class="recipe-home flex text-aligned">
                     <img src="spotify/img/home.svg" alt="Home">
-                    <span class="large-display color-6D6D6D">Home</span>
+                    <a class="large-display color-6D6D6D" href="#">Home</a>
                 </figure>
                 <figure class="recipe-near flex text-aligned ">
                     <img src="spotify/img/search.svg" alt="Cerca">
-                    <span class="large-display color-6D6D6D">Cerca</span>
+                    <a class="large-display color-6D6D6D" href="#">Cerca</a>
                 </figure>
                 <figure class="recipe-bookshelf flex text-aligned ">
                     <img src="spotify/img/libreria.svg" alt="Libreria">
-                    <span class="large-display color-6D6D6D">La tua libreria</span>
+                    <a class="large-display color-6D6D6D" href="#">La tua libreria</a>
                 </figure>
                 <div class="recipe-create-playlists large-display">
                     <h2 class="title-playList">playlist</h2>
                     <figure class="recipe-add-song flex">
                         <i class="fa-solid fa-square-plus fa-3x"></i>
-                        <span>Crea Playlist</span>
+                        <a class="playlist" href="#">Crea Playlist</a>
                     </figure>
                     <ul class="text-playList">
                         <li><a href="#">Nome Playlist</a></li>
@@ -58,19 +59,20 @@
                     </ul>
                 </div>
             </div>
+            <!-- Recipiente Bottom -->
             <div class="recipe-login flex">
                 <figure class="recipe-install flex">
                     <img class="image-download" src="spotify/img/download.svg" alt="Installa app">
-                    <span class="large-display color-6D6D6D">Installa app</span>
+                    <a class="large-display color-6D6D6D" href="#">Installa app</a>
                 </figure>
-                <hr class="large-display">
+                    <hr class="large-display">
                 <figure class="recipe-username flex">
                     <img class="image-login" src="spotify/img/profile.svg" alt="Login">
                     <h1 class="username large-display">John Doe</h1>
                 </figure>
             </div>
         </aside>
-        <!-- Recipiente Brani -->
+        <!-- Recipiente Canzoni -->
         <main class="recipe-song">
             <!-- Header Upgrade -->
             <header class="recipe-upgrade flex">
@@ -78,6 +80,7 @@
             </header>
             <!-- Recipiente Brani -->
             <div class="recipe-tracks">
+                <!-- Recipiente NavBar -->
                 <nav class="recipe-navbar flex">
                     <ul class="text-navbar flex">
                         <li class="active"><a href="#">in evidenza</a></li>
@@ -191,9 +194,10 @@
                         </div>
                     </div>
                 </section>
-                <div class="recipe-popular">
+                <!-- Sezione Brani popolari -->
+                <section class="recipe-popular">
                     <div class="mg-popular">
-                        <h1 class="title-popular">Creato per John Doe</h1>
+                        <h1 class="title-popular">Artisti più popolari</h1>
                         <span class="text-more">Più ascoltati, più accurati saranno i suggerimenti.</span> 
                     </div>
                     <div class="flex recipe-row">
@@ -216,46 +220,57 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </main>
     </div>
     <!-- Footer -->
     <footer class="recipe-navfooter flex">
         <nav class="container-navfooter flex">
+            <!-- Canzone Scelta -->
             <div class="recipe-music flex h-33">
                 <figure class="chosen-song">
                     <img src="spotify/img/sinister.jpeg" alt="Sinister">
                 </figure>
                 <div class="text-chones-song">
                     <span class="title-music">Sinister</span>
-                    <span class="title-song">Brano</span>
-                    <span class="title-name">Nome</span>
+                    <div class="recipe-info-son">
+                        <span class="title-song">Brano</span>
+                        <span class="title-name">Nome</span>
+                    </div>
                 </div>
                 <div class="like-it flex">
-                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-heart active-heart"></i>
                     <i class="fa-regular fa-folder"></i>
                 </div>
             </div>
+            <!-- Durata Canzone -->
             <div class="recipe-play h-33">
                 <div class="recipe-inPlay flex">
                     <i class="fa-solid fa-shuffle"></i>
                     <i class="fa-solid fa-backward-fast"></i>
-                    <i class="fa-regular fa-circle-play"></i>
+                    <i class="fa-regular fa-circle-play bottom-play"></i>
                     <i class="fa-solid fa-forward-fast"></i>
                     <i class="fa-solid fa-rotate-right"></i>
                 </div>
                 <div class="recipe-duration flex">
                     <span class="text-start">0.25</span>
-                    <span class="dash"></span>
+                    <div class="line-duration">
+                        <div class="line-large"></div>
+                        <div class="line-small"></div>
+                    </div>
                     <span class="text-end">4.35</span>
                 </div>
             </div>
+            <!-- Volume -->
             <div class="recipe-volume flex h-33">
                 <i class="fa-solid fa-list"></i>
                 <i class="fa-solid fa-tv"></i>
                 <i class="fa-solid fa-volume-high"></i>
-                <span class="dash volume"></span>
+                <div class="line-volume">
+                    <div class="volume-large"></div>
+                    <div class="volume-small"></div>
+                </div>
             </div>
         </nav>
     </footer>
