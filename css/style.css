@@ -114,6 +114,7 @@ li {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    overflow: hidden;
 }
 
 /* Recipiente Aside */
@@ -250,7 +251,7 @@ li {
     align-items: center;
     flex-wrap: wrap;
     row-gap: 10px;
-    width: 100%;
+    width: 90%;
 }
 
 /* Elementi dentro la lista Navbar */
@@ -281,6 +282,20 @@ li {
     padding: 0 0.5rem;
 }
 
+.image-container {
+    position: relative;
+}
+
+.player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    font-size: 50px;
+    display: none;
+    
+}
+
 /* Testi */
 .text-song , 
 .text-artists {
@@ -302,6 +317,7 @@ li {
     height: 90px;
     justify-content: center;
     align-items: center;
+    position: sticky;
 }
 
 /* Contenitore NavFooter */
@@ -419,6 +435,15 @@ li {
     font-size: 16px;
 }
 
+.image-container:hover .player {
+    display: inline;
+
+}
+
+.recipe-image figure:hover {
+    opacity: 0.6;
+    
+} 
 
 
 /* TODO: Media Query */
@@ -442,7 +467,7 @@ li {
     }
 
     .aside-navbar {
-        flex-basis: 200px;
+        flex-basis: 250px;
         align-items: normal;
     }
 
