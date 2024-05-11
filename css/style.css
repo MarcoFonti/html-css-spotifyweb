@@ -222,6 +222,7 @@ li {
     right: 0;
     justify-content: end;
     align-items: center;
+    z-index: 1;
 }
 
 /* Bottone Upgrade */
